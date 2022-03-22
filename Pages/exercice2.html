@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Style/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
     <title>Portfolio-groupe-3</title>
 </head>
 <body>
@@ -37,24 +38,52 @@
                 </ul>
             </div>
         </nav>
-        <h1 class="title-exo">MALCOLM X</h1>
     </header>
-    <main class="X" style="background-image: url(../Image/malcolm.jpg);">
-        <article id="malcolm">
-            <header class="black-panther">
-                <h1>Malcom X est le leader du mouvement Black Panther</h1>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium excepturi dolore eveniet eum impedit. Optio, iusto! Illo doloribus non, corrupti tempora ipsam debitis doloremque sed accusamus nam! Similique, unde earum.</p>
-            </header>
-            <div class="">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil hic nostrum ea neque veritatis similique itaque architecto, debitis esse necessitatibus quisquam provident rerum laudantium pariatur unde tempore dicta saepe laborum eos vitae magni ducimus. Aut beatae cupiditate magnam, obcaecati, ex, rem nam saepe accusamus nulla fugit nostrum. Tenetur, aliquid facere!</p>
-                <img src="../Image/x.jpg" class="MX" alt="Malcolm X">
+    <main class="swiper-container">
+                <!-- Slider main container -->
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide" style="background-image: url(../Image/malcolmx.webp);">
+                <a class="swiper-link" href="/Pages/malcolmx.html">
+                    <h1>MALCOLM X</h1> 
+                </a>
             </div>
-        </article>
+            <div class="swiper-slide" style="background-image: url(../Image/rosa.jpg);">
+                <a class="swiper-link" href="/Pages/rosa.html">
+                    <h1>ROSA LUXEMBOURG</h1>
+                </a>
+            </div>
+            <div class="swiper-slide" style="background-image: url(../Image/boris.jpg);">
+                <a class="swiper-link" href="/Pages/boris.html">
+                    <h1>BORIS NEMTSOV</h1>
+                </a>
+            </div>
+            <div class="swiper-slide" style="background-image: url(../Image/kravitzz.jpg);">
+                <a class="swiper-link" href="/Pages/kravitz.html">
+                    <h1>LENNY KRAVITZ</h1>
+                </a>
+            </div>
+            
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+        
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        
+            <!-- If we need scrollbar -->
+            <div class="swiper-scrollbar"></div>
+        </div>
     </main>
     <footer>
         <div class="credits">
-            Réalisé par <a class="mail" href="mailto:">Olga</a> <a class="mail" href="mailto:saomycham@gmail.com">Saomy</a> et <a class="mail" href="mailto:sethylunelo@gmail.com">Séthy</a>
+            Réalisé par <a class="mail" href="mailto:">Olga</a>, <a class="mail" href="mailto:saomycham@gmail.com">Saomy</a> et <a class="mail" href="mailto:sethylunelo@gmail.com">Séthy</a>
         </div>
     </footer> 
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="../app.js"></script>
 </body>
 </html>

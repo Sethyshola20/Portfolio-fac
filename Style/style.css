@@ -7,6 +7,10 @@
     scroll-behavior: smooth;
     list-style: none;
 }
+a{
+    color: inherit;
+    text-decoration: none;
+}
 header{
     background: rgb(223, 217, 217);
     
@@ -159,32 +163,50 @@ div.wrapper{
     transform: scale(1.01);
 }
 /*
-======= exercice 2
+    ======swiper and exercice 2
+*/
+.swiper-container{
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    align-items: center;
+    padding: 3em;
+}
+.swiper {
+    width: 80vw;
+    height: 60vh;
+  }
+.swiper-slide{
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    border-radius: 20px;
+}
+.swiper-link{
+    border: 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 90%;
+    z-index: 4;
+    color: #b33c0d;
+    font-weight: bold;
+}
+
+
+/*
+    =======Lenny Kravitz
 */
 
-article header h1, p{
-    color: white;
-    text-align: center;
-}
-.X{
-    background-position: center;
+.kravitz-article{
     display: flex;
-    justify-content: center;
-    padding: 2em;
+    flex-direction: column;
+    background-color: #6a696b;
+    min-height: 100vh;
 }
-#malcolm{
-    background-color: rgba(0, 0, 0, 0.6);
-    min-height: 120vh;
-    width: 60%;
-    border-radius: 20px;
-    padding: 2em 5em 5em 5em;
-}
-.MX{
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    margin-top: 1em;
-}
-.black-panther{
-    background-color: rgba(136, 129, 129, 0);
+.kravitz-article header{
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
 }
