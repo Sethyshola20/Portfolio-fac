@@ -12,7 +12,7 @@ a{
     text-decoration: none;
 }
 header{
-    background: rgb(223, 217, 217);
+    background: rgb(255, 255, 255);
     
 }
 .navbar {
@@ -34,6 +34,7 @@ header{
 .navbar-menu {
     display: flex;
     list-style: none;
+    flex-wrap: wrap;
     align-items: center;
 }
 .subnav{
@@ -87,7 +88,7 @@ li:hover{
     transition: all 0.3s ease-in-out;
 }
 #home:hover{
-    background: #b435e6;
+    background: #6a696b;
     border-radius: 5px;
     cursor: pointer;
 }
@@ -98,8 +99,8 @@ li:hover{
     transition: all 0.3s ease-in-out;
 }
 .exo:hover{
-    background: #5f0bce;
-    border-radius: 20px;
+    background: #F2CCA2;
+    border-radius: 5px;
     cursor: pointer;
 }
 
@@ -117,15 +118,12 @@ main {
     text-align: center;
     padding: 0.7em;
 }
-
+header h1{
+    color: #F2CCA2;
+}
 .image-wrapper{
-    background: url(../Image/portfolio-pic.jpg);
-    position: fixed; 
-    top: -20%; 
-    left: -50%; 
-    width: 200%; 
-    height: 200%;
-    z-index: -1;
+    background-repeat: no-repeat;
+    background-position: center center;
 
 }  
 footer{
@@ -145,14 +143,103 @@ footer{
 .mail:hover{
     color: rgb(184, 52, 211);
 }
+
+/*
+    ===================MEDIA QUERRY for navbar
+*/
+
+@media screen and (max-width: 920px) {
+    .navbar-container {
+        width: 100%;
+        padding: 0;
+    }
+    .navbar-menu {
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        top: -1000px;
+        opacity: 0;
+        transition: all 0.5s ease;
+        height: 50vh;
+        z-index: -1;
+    }
+
+    .navbar-menu.active {
+        top: 0%;
+        flex-direction: column;
+        margin: 0;
+        transition: all 0.5s ease;
+        z-index: 99;
+        background: #343335;
+        height: fit-content;
+        font-size: 1rem;
+        opacity: 0.98;
+    }
+    .navbar__toggle .bar {
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        background: #F2CCA2;
+    }
+
+    .exo{
+        width: 100%;
+    }
+
+    .navbar-links{
+        text-align: center;
+        padding: 0.5em;
+        width: 100%;
+        color: white;
+        opacity: 0.8;
+        display: table;
+    }
+    #mobile-menu {
+        position: absolute;
+        top: 5%;
+        right: 5%;
+        transform: translate(5%, 20%);
+        z-index: 100;
+        opacity: 2;
+    }
+
+    .navbar__toggle .bar {
+        display: block;
+        cursor: pointer;
+    }
+    #mobile-menu.is-active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    
+    #mobile-menu.is-active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    #mobile-menu.is-active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
 /*
 ======= exercice 1
 */
+.premier-exercice{
+    background-color: linear-gradient(
+        45deg,
+        #9d61ce,
+        #F2CCA2,
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 div.wrapper{
     padding: 3em;
 }
 .pic-ex1{
-    width: 30em;
+    width: 35em;
     height: 20em;
     border: transparent;
     border-radius: 5px;
@@ -161,6 +248,23 @@ div.wrapper{
 }
 .pic-ex1:hover{
     transform: scale(1.01);
+}
+
+/*
+    =============MEDIA QUERRY FOR EX1
+*/
+@media screen and (max-width: 920px) {
+    div.wrapper{
+        padding: 1em;
+        grid-column-gap: 1em;
+    }
+    .pic-ex1{
+        width: 43vw;
+        height: 25vw;
+    }
+    .premier-exercice{
+        min-height: 80vh;
+    }
 }
 /*
     ======swiper and exercice 2
@@ -173,8 +277,8 @@ div.wrapper{
     padding: 3em;
 }
 .swiper {
-    width: 80vw;
-    height: 60vh;
+    width: 90vw;
+    height: 70vh;
   }
 .swiper-slide{
     background-repeat: no-repeat;
@@ -193,20 +297,101 @@ div.wrapper{
     color: #b33c0d;
     font-weight: bold;
 }
-
-
+.swiper-heading{
+    font-weight: bold;
+    color: #F2CCA2;
+}
 /*
-    =======Lenny Kravitz
+    =============MEDIA QUERRY FOR SWIPER
 */
-
-.kravitz-article{
+@media screen and (max-width: 920px) {
+    .swiper-container{
+        display: flex;
+        min-height: 80vh;
+        width: 100%;
+        align-items: center;
+        padding: 0;
+    }
+    .swiper {
+        width: 95vw;
+        height: 70vh;
+    }
+}
+/*
+    =======articles
+*/
+article h1, article p, article .citation{
+    color: #ffffff;
+    
+}
+article{
     display: flex;
     flex-direction: column;
-    background-color: #6a696b;
+    align-items: center;
+    background-color: #000;
     min-height: 100vh;
+    text-align: center;
 }
-.kravitz-article header{
-    background-repeat: no-repeat;
-    background-position: center center;
+.text p{
+    line-height: 1.7em;
+    font-size: 1.25rem;
+    padding: 2em;
+    text-align: justify;
+}
+
+.article-header{
+    width: 100%;
+    height: 500px;
     background-size: cover;
+    background-position: center center;
+}
+.citation{
+    padding: 2em;
+}
+video{
+    width: 800px;
+    height: 500px;
+}
+/*
+    ======= MEDIA QUERRY FOR ARTICLES
+*/
+@media screen and (max-width: 920px){
+    .text p {
+        font-size: 0.8rem;
+        padding: 1em;
+    }
+    article{
+        min-height: 80vh;
+    }
+    video{
+        height: 50vw;
+        width: 80vw;
+    }
+}
+
+/*
+    =======malcolm grid
+*/
+.grid-text {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    }
+    
+    .div1 { grid-area: 1 / 1 / 6 / 2; }
+    .div2 { grid-area: 1 / 2 / 6 / 3; }
+
+/*
+    ========exo3
+*/
+.ex3{
+    display: flex;
+    align-items: center;
+    
+}
+.exo3{
+    width: 100%;
+    height: 25vh;
 }
